@@ -1,10 +1,11 @@
 const mysql = require("mysql");
+require("dotenv").config();
 
 // Configuración de la conexión a la base de datos MySQL
 const connection = mysql.createConnection({
   host: "localhost", // Cambia esto por la dirección de tu servidor MySQL
   user: "root", // Cambia esto por el nombre de usuario de tu base de datos
-  password: "", // Cambia esto por la contraseña de tu base de datos
+  password: process.env.PASSWORD_DB, // Cambia esto por la contraseña de tu base de datos
   database: "prueba", // Cambia esto por el nombre de tu base de datos
 });
 

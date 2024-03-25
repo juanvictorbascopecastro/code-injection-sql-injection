@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de archivo</title>
+  </head>
+  <body>
+    <h2>Formulario de Registro</h2>
+
+    <form
+      action="http://localhost:3000/archivo"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <label for="archivo">Archivo:</label>
+        <input type="file" id="archivo" name="archivo" required />
+      </div>
+      <div>
+        <label for="dato">Datos de archivo</label>
+        <input type="text" id="dato" name="dato" required />
+      </div>
+      <div>
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <h2>Formulario de Registro</h2>
+
+    <form action="http://localhost:3000/insercion-seguro" method="post">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+      <div>
+        <label for="apellido">Apellido Paterno:</label>
+        <input type="text" id="apellido" name="apellido" required />
+      </div>
+      <div>
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </body>
+</html>

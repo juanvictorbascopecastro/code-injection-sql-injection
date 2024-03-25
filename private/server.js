@@ -1,8 +1,8 @@
 require("dotenv").config(); // Cargar variables de entorno desde el archivo .env
 const express = require("express");
+const app = express();
 const cors = require("cors"); // Importar el módulo cors
 const path = require("path");
-const app = express();
 const PORT = process.env.PORT || 3000; // Usar la variable de entorno PORT o por defecto 3000
 const multer = require("multer");
 const conexion = require("./conexion"); // Importa el módulo de configuración de MySQL
@@ -88,8 +88,8 @@ app.post("/insercion-no-seguro", (req, res) => {
 
 app.post("/insercion-seguro", (req, res) => {
   let { nombre, apellido } = req.body;
-  nombre = conexion.escape(nombre); // detecta codigo SQL
-  apellido = conexion.escape(apellido); // detecta codigo SQL
+  //   nombre = conexion.escape(nombre); // detecta codigo SQL
+  //   apellido = conexion.escape(apellido); // detecta codigo SQL
   // Consulta SQL para insertar los datos en la tabla
   const sql = `INSERT INTO usuarios (nombre, apellido) VALUES (?, ?)`;
   // Ejecutar la consulta SQL con los datos recibidos
