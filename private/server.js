@@ -1,3 +1,4 @@
+// el lenguaje que usted desee con expeciopn de PHP (5 ejemplos), requique los ejemplos realizados en clases de code injection y sql injection
 require("dotenv").config(); // Cargar variables de entorno desde el archivo .env
 const express = require("express");
 const app = express();
